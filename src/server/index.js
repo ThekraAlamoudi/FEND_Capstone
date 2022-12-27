@@ -38,7 +38,7 @@ app.get('/test', function(req, res) {
 
 // Route to fetch lat and lang coordinates using geoname API
 app.get('/getLatLang', (req, res) => {
-  const url = `http://api.geonames.org/searchJSON?maxRows=10&operator=OR&q=${req.query.city}&name=${req.query.city}&username=${process.env.USERNAME}`;
+  const url = `http://api.geonames.org/searchJSON?maxRows=10&operator=OR&q=${req.query.city}&name=${req.query.city}&username=${process.env.geonamesUser}`;
   axios.get(url)
     .then(resp => {
       res.end(JSON.stringify(resp.data.geonames[0]));
@@ -50,7 +50,7 @@ app.get('/getLatLang', (req, res) => {
 
 // Route to get weather details of the place using weatherbit API
 app.get('/getWeather', (req, res) => {
-  const url = `https://api.weatherbit.io/v2.0/current?lat=${req.query.lat}&lon=${req.query.long}&key=${process.env.WEATHER_KEY}`;
+  const url = `https://api.weatherbit.io/v2.0/current?lat=${req.query.lat}&lon=${req.query.long}&key=${process.env.weatherKey}`;
   axios.get(url)
     .then(resp => {
       res.end(JSON.stringify(resp.data));
@@ -62,7 +62,7 @@ app.get('/getWeather', (req, res) => {
 
 // Route to get images related to trip using pixabay API
 app.get('/getPics', (req, res) => {
-  const url = `https://pixabay.com/api/?key=${process.env.PIXABAY_KEY}&q=${req.query.q}&image_type=photo`;
+  const url = `https://pixabay.com/api/?key=${process.env.pixabayKey}&q=${req.query.q}&image_type=photo`;
   axios.get(url)
     .then(resp => {
       res.end(JSON.stringify(resp.data.hits[0]));
