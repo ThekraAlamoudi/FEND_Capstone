@@ -44,7 +44,7 @@ app.get('/getLatLang', (req, res) => {
       res.end(JSON.stringify(resp.data.geonames[0]));
     })
     .catch(err => {
-      res.end(JSON.stringify({err : "There was some error"}));
+      res.end(JSON.stringify({err : "An error has occured!"}));
     });
 });
 
@@ -56,7 +56,7 @@ app.get('/getWeather', (req, res) => {
       res.end(JSON.stringify(resp.data));
     })
     .catch(err => {
-      res.end(JSON.stringify({err : "There was some error"}));
+      res.end(JSON.stringify({err : "An error has occured!"}));
     });
 });
 
@@ -68,7 +68,7 @@ app.get('/getPics', (req, res) => {
       res.end(JSON.stringify(resp.data.hits[0]));
     })
     .catch(err => {
-      res.end(JSON.stringify({err : "There was some error"}));
+      res.end(JSON.stringify({err : "An error has occured!"}));
     });
 });
 
