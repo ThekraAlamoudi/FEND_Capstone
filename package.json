@@ -9,7 +9,7 @@
     "build-dev": "webpack-dev-server  --config webpack.dev.js --open"
   },
   "keywords": [],
-  "author": "Thekra-Alamoudi-Udacity",
+  "author": "",
   "description": "Travel App",
   "dependencies": {
     "axios": "^0.21.1",

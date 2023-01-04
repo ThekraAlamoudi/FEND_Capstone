@@ -1,6 +1,6 @@
 // Import SCSS stylesheets
 import './styles/style.scss'
-
+import './styles/media.scss'
 // Import JavaScript modules
 import { processInput } from './js/form.js';
 import { formHandler, getWeather, getPics } from './js/api.js';
