@@ -1,7 +1,7 @@
 import { getPics } from "../src/client/js/api"
 // The describe() function takes two arguments - a string description, and a test suite as a callback function.  
 // A test suite may contain one or more related tests    
-describe("Testing the submit functionality", () => {
+describe("Testing the getPics functionality", () => {
     // The test() function has two arguments - a string description, and an actual test as a callback function.  
     test("Testing the getPics() function", () => {
         // Define the input for the function, if any, in the form of variables/array
